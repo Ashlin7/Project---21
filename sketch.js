@@ -46,12 +46,10 @@ function draw(){
     
     if(isTouching(box,blueSurface)){
        box.shapeColor = "blue";
-       bounceOff(box,blueSurface);
     }
     
     if(isTouching(box,greenSurface)){
         box.shapeColor = "green";
-        bounceOff(box,greenSurface);
      }
     
      if(isTouching(box,redSurface)){
@@ -63,7 +61,6 @@ function draw(){
     
      if(isTouching(box,yellowSurface)){
         box.shapeColor = "yellow";
-        bounceOff(box,yellowSurface);
      }
      
      top_edge.visible = false;
@@ -71,21 +68,15 @@ function draw(){
      left_edge.visible = false;
      right_edge.visible = false;
      
-     if(isTouching(box,top_edge)){
-        bounceOff(box,top_edge);
-     }
-
-     if(isTouching(box,bottom_edge)){
-        bounceOff(box,bottom_edge);
-     }
-
-     if(isTouching(box,left_edge)){
-        bounceOff(box,left_edge);
-     }
-
-     if(isTouching(box,right_edge)){
-        bounceOff(box,right_edge);
-     }
+     box.bounceOff(blueSurface);
+     box.bounceOff(greenSurface);
+     box.bounceOff(redSurface);
+     box.bounceOff(yellowSurface);
+     
+     box.bounceOff(top_edge);
+     box.bounceOff(bottom_edge);
+     box.bounceOff(right_edge);
+     box.bounceOff(left_edge);
     
 
 
